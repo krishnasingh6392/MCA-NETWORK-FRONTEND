@@ -9,7 +9,9 @@ export default function AdminContacts() {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/admin-contact");
+        const response = await fetch(
+          "https://mca-network-backend.onrender.com" + "/api/admin-contact"
+        );
         const data = await response.json();
         setContacts(data);
       } catch (error) {
@@ -22,9 +24,12 @@ export default function AdminContacts() {
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`http://localhost:5000/api/admin-contact/${id}`, {
-        method: "DELETE",
-      });
+      await fetch(
+        `https://mca-network-backend.onrender.com/api/admin-contact/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
       setContacts(contacts.filter((contact) => contact._id !== id));
       toast.success("Contact deleted successfully");
     } catch (error) {
