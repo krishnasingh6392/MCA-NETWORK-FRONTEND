@@ -8,16 +8,16 @@ const AboutMMMUT = () => {
         About MMMUT
       </h2>
 
-      <div className="flex justify-between gap-2 px-12 mt-8">
+      <div className="flex justify-between gap-2 px-12 mt-8 mb-4">
         <div className="h-72 w-1/2 about-mmmut-img">
-          <img 
-            src={mmmutMaingate} 
-            className="h-72 rounded-md" 
-            alt="MMMUT Main Gate" 
+          <img
+            src={mmmutMaingate}
+            className="h-72 rounded-md"
+            alt="MMMUT Main Gate"
           />
         </div>
         <div className="h-72 w-1/2 about-mmmut-para">
-          <p className="text-justify text-gray-900 rounded-md text-base leading-relaxed mx-auto p-8 bg-blue-200">
+          <p className="text-justify text-slate-900 rounded-md text-base leading-relaxed mx-auto p-8 bg-white shadow-md ">
             Madan Mohan Malaviya University of Technology (MMMUT), located in
             Gorakhpur, Uttar Pradesh, is a state technical university committed
             to academic excellence, innovation, and holistic student

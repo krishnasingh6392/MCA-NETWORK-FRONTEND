@@ -14,14 +14,14 @@ const Galleries = () => {
         MCA Galleries
       </h2>
 
-      <div className="flex justify-between items-center p-24 mt-8 bg-gradient-to-br from-blue-400 to-red-300">
+      <div className="flex justify-between items-center p-24 mt-8 bg-gradient-to-br from-orange-300 to-blue-300">
         <div className="">
           <p className="text-6xl h-60 w-96 bg-blue-100 rounded-r-full pt-20 text-blue-500 pl-8 font-serif">
             Glimpses
           </p>
         </div>
         <div className="w-1/2 mt-12">
-          <p className="text-justify text-lg text-slate-900 leading-normal">
+          <p className="text-justify text-lg text-slate-800 font-sans leading-normal">
             MCA Gallery – Capturing Moments of Learning & Growth The MCA Gallery
             showcases the vibrant academic and extracurricular life of the
             Master of Computer Applications department at MMMUT. From coding
@@ -35,11 +35,11 @@ const Galleries = () => {
         </div>
       </div>
 
-      <div className="flex justify-between items-center mt-16 px-12">
-        <div>
+      <div className="flex justify-between items-center mt-16 px-12 ">
+        <div className="hover:cursor-pointer">
           <img
             src={classroom}
-            className="w-72 h-60 shadow-xl rounded-md"
+            className="w-72 h-60 shadow-xl rounded-md object-cover"
             alt=""
           />
           <p className="text-center text-blue-700 font-semibold mt-4">
@@ -50,7 +50,7 @@ const Galleries = () => {
         <div>
           <img
             src={hackathon}
-            className="w-72 h-60 shadow-xl rounded-md"
+            className="w-72 h-60 shadow-xl rounded-md object-fill"
             alt=""
           />
           <p className="text-center font-semibold text-blue-700 mt-4">
@@ -61,10 +61,11 @@ const Galleries = () => {
         <div>
           <img
             src={studentachievement}
-            className="w-72 h-60 shadow-xl rounded-md object-fill"
+            className="w-72 h-60 shadow-xl rounded-md object-cover"
+            style={{ objectPosition: "center 40%" }}
             alt=""
           />
-          <p className="text-center font-semibold text-blue-700 mt-4">
+          <p className="text-center font-semibold text-blue-700 mt-4 ">
             3. Student Achievements
           </p>
         </div>
@@ -73,7 +74,7 @@ const Galleries = () => {
       <div className="flex justify-between items-center mt-12 px-12">
         <div>
           <img src={csse} className="w-72 h-60 shadow-xl rounded-md" alt="" />
-          <p className="text-center font-semibold text-blue-700 mt-4">
+          <p className="text-center font-semibold text-blue-700 mt-4 object-cover">
             5. Cultural & Festive Moments
           </p>
         </div>
@@ -81,7 +82,7 @@ const Galleries = () => {
         <div>
           <img
             src={society}
-            className="w-72 h-60 shadow-xl rounded-md"
+            className="w-72 h-60 shadow-xl rounded-md object-cover"
             alt=""
           />
           <p className="text-center font-semibold text-blue-700 mt-4">
@@ -91,11 +92,11 @@ const Galleries = () => {
         <div>
           <img
             src={convocation}
-            className="w-72 h-60 shadow-xl rounded-md"
+            className="w-72 h-60 shadow-xl rounded-md object-cover"
             alt=""
           />
           <p className="text-center font-semibold text-blue-700 mt-4">
-            7.MCA Society Activities
+            8.Convocation
           </p>
         </div>
       </div>

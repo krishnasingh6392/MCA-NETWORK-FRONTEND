@@ -8,7 +8,6 @@ import ltimind from "../images/ltimindtree.webp";
 import cyfuture from "../images/cyfuture.png";
 import josh from "../images/josh.png";
 import qss from "../images/qss.png";
-
 import gfg from "../images/gfg.jpg";
 import hiremi from "../images/hiremi.png";
 import xfanatical from "../images/x fanatical.webp";
@@ -73,11 +72,11 @@ const Placement = () => {
         <h2 className="text-3xl font-bold text-center text-blue-800">
           Our Recruiters
         </h2>
-        <div className="grid grid-cols-4 gap-8 mt-8 px-8">
+        <div className="grid grid-cols-4 gap-8 mt-8 px-8 hover:cursor-pointer ">
           {companies.map((company, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition"
+              className="flex flex-col items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition hover:scale-90 ease-in-out"
             >
               <img
                 src={company.src}

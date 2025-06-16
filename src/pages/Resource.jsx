@@ -69,14 +69,14 @@ const resources = [
 const Resources = () => {
   return (
     <div>
-      <h2 className="text-4xl font-bold text-center text-blue-900 mt-8">
+      <h2 className="text-4xl font-bold text-center text-blue-900 ">
         MCA Resources
       </h2>
-      <div className="flex justify-center items-center gap-8 px-4 py-8 flex-wrap">
+      <div className="flex flex-wrap justify-center gap-8  items-center  mt-12 ">
         {resources.map((semester, index) => (
           <div
             key={index}
-            className={`bg-gradient-to-br from-blue-200 to-blue-100 w-full md:w-1/3 h-auto rounded-lg shadow-lg p-4`}
+            className={`bg-white  h-[450px] mt-8   rounded-lg shadow-lg p-4`}
           >
             <p className="text-center text-2xl mt-2 text-blue-600 font-semibold">
               {semester.title}

@@ -1,5 +1,5 @@
 import React from "react";
-import aboutmcaphoto from "../images/mca_photo.jpeg";
+import mcaBanner from "/miscillineous/mca banner.jpg";
 
 const AboutMCA = () => {
   return (
@@ -8,11 +8,11 @@ const AboutMCA = () => {
         About M.C.A
       </h2>
       <div className="mt-12">
-        <img src={aboutmcaphoto} className="h-96 w-full" alt="" />
+        <img src={mcaBanner} className="h-96 w-full" alt="" />
       </div>
 
       <div>
-        <p className="bg-blue-200 p-12 leading-loose text-justify font-medium text-slate-800">
+        <p className=" p-12 leading-loose text-justify font-semibold text-slate-800">
           About MCA – MMMUT Gorakhpur The Master of Computer Applications (MCA)
           program at Madan Mohan Malaviya University of Technology (MMMUT),
           Gorakhpur, is a comprehensive two-year postgraduate course aimed at
@@ -36,6 +36,15 @@ const AboutMCA = () => {
           focus on innovation, MCA at MMMUT offers a solid foundation for a
           successful career in the tech industry
         </p>
+
+        <div className="flex justify-center">
+          <a href="https://www.mmmut.ac.in/A_PG" target="_blank">
+            {" "}
+            <button className="bg-blue-400 px-6 py-2 rounded-r-full rounded-l-full hover:bg-blue-600 text-white">
+              know more
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
-import vinay from "../images/vinay jain.png";
-import javed from "../images/javed khan.png";
-import soren from "../images/soren.png";
+import vinay from "/alumni/vinay jain.png";
+import javed from "/alumni/javed khan.png";
+import soren from "/alumni/soren.png";
 
 const Alumni = () => {
   // Array of alumni objects

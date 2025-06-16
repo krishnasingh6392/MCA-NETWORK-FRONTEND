@@ -52,7 +52,7 @@ function App() {
       <ToastContainer position="top-right" autoClose={3000} />
       <div className="fixed bg-[url('/src/assets/pattern.png')] opacity-5"></div>
       <Nav />
-      <main className="pt-20">
+      <main className="pt-20 ">
         <Routes>
           <Route
             path="/"

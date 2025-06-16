@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import cap from "/files/cap.png";
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,25 +25,37 @@ const Nav = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-blue-300 backdrop-blur-md shadow-sm"
+      className="fixed top-0 left-0 right-0 z-50 bg-green-50  backdrop-blur-md shadow-sm"
     >
-      <div className="max-w-8xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center"
-          >
+      <div className=" mx-auto  ">
+        <div className="flex justify-center items-center w-full bg-orange-300">
+          <motion.div className="flex justify-center items-center  p-4">
             <Link to="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                MCA NETWORK
+              <span className="text-4xl font-bold bg-fary-50  bg-clip- text-gray-50">
+                MCA MALVIYANS
               </span>
-              <i className="ri-group-line text-indigo-600 text-2xl"></i>
             </Link>
           </motion.div>
 
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{
+              y: -10,
+            }}
+            transition={{
+              repeat: Infinity,
+              duration: 0.5,
+              ease: "easeInOut",
+              repeatType: "reverse",
+            }}
+          >
+            <img src={cap} className="h-10 rounded-full" alt="" />
+          </motion.div>
+        </div>
+
+        <div className="flex justify-center w-full  bg-blue-100 items-center h-20 ">
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 text-lg text-blue-500">
             {menuItems.map((item, index) => (
               <motion.div
                 key={index}
@@ -52,7 +65,7 @@ const Nav = () => {
               >
                 <Link
                   to={item.path}
-                  className="text-gray-600 hover:text-indigo-600 transition-colors duration-200 font-medium"
+                  className="text-blue-600 hover:text-indigo-600 transition-colors duration-200 font-semibold"
                 >
                   {item.label}
                   <motion.span

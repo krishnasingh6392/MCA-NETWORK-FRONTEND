@@ -68,7 +68,7 @@ const MCAFaculty = () => {
           >
             <img
               src={member.src}
-              className="w-48 h-48 object-cover rounded-full"
+              className="w-48 h-48  rounded-full"
               alt={`${member.name} - ${member.designation}`}
             />
             <h3 className="mt-4 text-xl font-semibold text-blue-700">
@@ -80,7 +80,7 @@ const MCAFaculty = () => {
       </div>
       <div className="flex justify-center mt-6">
         <a
-          href="/Faculty" // Replace with your actual route/page
+          href="/Faculty"
           className="bg-blue-400 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-blue-600 transition duration-300"
         >
           View Faculties
