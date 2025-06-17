@@ -22,6 +22,7 @@ import Placementweb from "./pages/Placementweb";
 import Alumniweb from "./pages/Alumniweb";
 import ContactForm from "./pages/Contact";
 import AdminContacts from "./pages/AdminContacts";
+import FacultyRegistration from "./pages/FacultyRegistration";
 
 const pageVariants = {
   initial: {
@@ -170,6 +171,10 @@ function App() {
           <Route path="/about-mca" element={<AboutMCAweb />} />
           <Route path="/galleries" element={<Galleries />} />
           <Route path="/faculty" element={<FacultyWeb />} />
+          <Route
+            path="/facultyRegistration"
+            element={<FacultyRegistration />}
+          />
           <Route path="/contact" element={<ContactForm />} />
         </Routes>
       </main>

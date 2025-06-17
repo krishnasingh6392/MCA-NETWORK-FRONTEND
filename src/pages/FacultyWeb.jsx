@@ -12,8 +12,10 @@ import vijay from "../images/vijay tiwari.jpg";
 import ashish from "../images/ashish srivastav.jpeg";
 import anithuram from "../images/arinutham.jpeg";
 import pranjal from "../images/pranjal.png";
+import finger from "/miscillineous/point.png";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
-// Faculty and Research Scholars data with bio and image
 const facultyData = [
   {
     id: 1,
@@ -254,39 +256,59 @@ const facultyData = [
   },
 ];
 
-// FacultyList Component
 const FacultyList = ({ facultyData }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {facultyData.map((faculty) => (
-        <div
-          key={faculty.id}
-          className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-center transition-transform transform hover:scale-105"
-        >
-          <img
-            src={faculty.image}
-            alt={faculty.name}
-            className="w-32 h-32 rounded-full mb-4 border-4 border-blue-500"
-          />
-          <h3 className="text-2xl font-semibold text-center mb-2">
-            {faculty.name}
-          </h3>
-          <p className="text-gray-600 text-center mb-2">
-            {faculty.designation}
+    <>
+      <div>
+        <Link to="/facultyRegistration">
+          <p className="bg-gray-50 font-semibold text-center text-orange-400 text-2xl hover:cursor-pointer flex justify-center gap-4 items-center">
+            <motion.span
+              animate={{ x: 10 }}
+              transition={{
+                duartion: 1,
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatType: "reverse",
+              }}
+              className="text-blue-500"
+            >
+              <img src={finger} className="h-8" />
+            </motion.span>{" "}
+            Click here to Register as the faculty of ITCA
           </p>
-          <p className="text-gray-500 text-center mb-2">
-            Phone: {faculty.phone}
-          </p>
-          <p className="text-gray-500 text-center mb-4">
-            Email:{" "}
-            <a href={`mailto:${faculty.email}`} className="text-blue-600">
-              {faculty.email}
-            </a>
-          </p>
-          <p className="text-gray-700 text-center">{faculty.bio}</p>
-        </div>
-      ))}
-    </div>
+        </Link>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 ">
+        {facultyData.map((faculty) => (
+          <div
+            key={faculty.id}
+            className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-center transition-transform transform hover:scale-105"
+          >
+            <img
+              src={faculty.image}
+              alt={faculty.name}
+              className="w-32 h-32 rounded-full mb-4 border-4 border-blue-500"
+            />
+            <h3 className="text-2xl font-semibold text-center mb-2">
+              {faculty.name}
+            </h3>
+            <p className="text-gray-600 text-center mb-2">
+              {faculty.designation}
+            </p>
+            <p className="text-gray-500 text-center mb-2">
+              Phone: {faculty.phone}
+            </p>
+            <p className="text-gray-500 text-center mb-4">
+              Email:{" "}
+              <a href={`mailto:${faculty.email}`} className="text-blue-600">
+                {faculty.email}
+              </a>
+            </p>
+            <p className="text-gray-700 text-center">{faculty.bio}</p>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 

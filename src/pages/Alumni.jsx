@@ -7,6 +7,7 @@ import mrityunjay from "/alumni/mrityunjay tiwari.jpeg";
 import raghvendra from "/alumni/raghvendra pratap singh.jpeg";
 import subham from "/alumni/shubham singh.jpeg";
 import neha from "/alumni/neha singh.jpeg";
+import ashutosh from "../../public/alumni/ashutosh singh.jpeg";
 
 const Alumni = () => {
   // Array of alumni objects
@@ -20,10 +21,10 @@ const Alumni = () => {
     },
     {
       id: 2,
-      name: "Sonika Sharan",
-      image: soren,
-      company: "PureSoftware Ltd",
-      linkedin: "https://www.linkedin.com/in/sonika-sharan-12a5a2158/",
+      name: "Ashutosh Singh",
+      image: ashutosh,
+      company: "Jr Software Engineer at Vagaro Technologies",
+      linkedin: "https://www.linkedin.com/in/ashutosh-sin1096/",
     },
     {
       id: 3,

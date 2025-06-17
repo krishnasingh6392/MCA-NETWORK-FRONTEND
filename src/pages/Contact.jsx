@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
+import axios from "axios";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -9,38 +8,25 @@ const ContactForm = () => {
     email: "",
     message: "",
   });
-  const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    console.log("Input Changed");
+    console.log(e.target.value);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sending...");
-
     try {
-      const res = await fetch(
-        "https://mca-network-backend.onrender.com" + "apicontact",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        }
+      const response = await axios.post(
+        "http://localhost:5000/contactUser/contactUser",
+        formData
       );
-
-      const data = await res.json();
-      if (res.ok) {
-        setStatus("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
-        toast.success("Message sent successfully!");
-      } else {
-        setStatus(data.error || "Something went wrong.");
-        toast.error(data.error || "Something went wrong.");
-      }
+      alert("Message sent successfully!");
+      console.log(response.data);
     } catch (err) {
-      setStatus("Failed to send message.");
-      toast.error("Failed to send message.");
+      console.log("error is:", err);
+      alert("error occured");
     }
   };
 
@@ -118,15 +104,6 @@ const ContactForm = () => {
         >
           Send Message
         </button>
-        {status && (
-          <p
-            className={`text-sm text-center ${
-              status.includes("success") ? "text-green-600" : "text-red-600"
-            }`}
-          >
-            {status}
-          </p>
-        )}
       </form>
     </motion.div>
   );
